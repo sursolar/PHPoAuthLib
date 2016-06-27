@@ -20,7 +20,7 @@ Edit your `composer.json` and add:
 ```json
 {
     "require": {
-        "lusitanian/oauth": "~0.3"
+        "sursolar/oauth": "~0.3"
     }
 }
 ```
@@ -59,6 +59,7 @@ Included service implementations
     - Xing
     - Yahoo
 - OAuth2
+    - Shogakukan Account
     - Amazon
     - BitLy
     - Bitrix24

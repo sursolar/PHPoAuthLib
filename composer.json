@@ -1,5 +1,5 @@
 {
-    "name": "lusitanian/oauth",
+    "name": "sursolar/oauth",
     "description": "PHP 5.3+ oAuth 1/2 Library",
     "keywords": ["oauth", "authentication", "authorization", "security"],
     "license": "MIT",
@@ -15,6 +15,10 @@
         {
             "name": "Elliot Chance",
             "email": "elliotchance@gmail.com"
+        },
+        {
+            "name": "sursolar",
+            "email": "solar-support@sur.co.jp"
         }
     ],
     "require": {
