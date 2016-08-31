@@ -15,7 +15,7 @@ class ShogakukanAccount extends AbstractService
     /**
      * Facebook www url - used to build dialog urls
      */
-    const WWW_URL = 'http://dev-oauth.jobs/';
+    const WWW_URL = 'http://dev-oauth.sho.co.jp/';
 
     /**
      * Defined scopes
@@ -25,12 +25,10 @@ class ShogakukanAccount extends AbstractService
      * @link https://developers.facebook.com/docs/reference/login/
      * @link https://developers.facebook.com/tools/explorer For a list of permissions use 'Get Access Token'
      */
-    // Default scope
-    const SCOPE_PUBLIC_PROFILE                = 'public_profile';
     // Email scopes
     const SCOPE_EMAIL                         = 'email';
     // Extended scopes
-    const SCOPE_PESONAL_INFORMATION           = 'personal_information';
+    const SCOPE_PESONAL_INFORMATION           = 'personal';
 
     public function __construct(
         CredentialsInterface $credentials,
@@ -42,7 +40,7 @@ class ShogakukanAccount extends AbstractService
         parent::__construct($credentials, $httpClient, $storage, $scopes, $baseApiUri);
 
         if (null === $baseApiUri) {
-            $this->baseApiUri = new Uri('http://dev-oauth.jobs/');
+            $this->baseApiUri = new Uri('http://dev-oauth.sho.co.jp/');
         }
     }
 
@@ -51,7 +49,7 @@ class ShogakukanAccount extends AbstractService
      */
     public function getAuthorizationEndpoint()
     {
-        return new Uri('http://dev-oauth.jobs/oauth/authorize');
+        return new Uri('http://dev-oauth.sho.co.jp/oauth/authorize');
     }
 
     /**
@@ -59,7 +57,7 @@ class ShogakukanAccount extends AbstractService
      */
     public function getAccessTokenEndpoint()
     {
-        return new Uri('http://dev-oauth.jobs/oauth/access_token');
+        return new Uri('http://dev-oauth.sho.co.jp/oauth/access_token');
     }
 
     /**
