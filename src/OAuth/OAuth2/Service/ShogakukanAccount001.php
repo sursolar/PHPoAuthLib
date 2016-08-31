@@ -10,7 +10,7 @@ use OAuth\Common\Http\Client\ClientInterface;
 use OAuth\Common\Storage\TokenStorageInterface;
 use OAuth\Common\Http\Uri\UriInterface;
 
-class ShogakukanAccount extends AbstractService
+class ShogakukanAccount001 extends AbstractService
 {
     /**
      * Facebook www url - used to build dialog urls
