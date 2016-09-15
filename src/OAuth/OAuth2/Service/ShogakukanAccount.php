@@ -49,7 +49,7 @@ class ShogakukanAccount extends AbstractService
      */
     public function getAuthorizationEndpoint()
     {
-        return new Uri('http://dev-oauth.sho.co.jp/oauth/authorize');
+        return new Uri($this->baseApiUri. 'oauth/authorize');
     }
 
     /**
@@ -57,7 +57,7 @@ class ShogakukanAccount extends AbstractService
      */
     public function getAccessTokenEndpoint()
     {
-        return new Uri('http://dev-oauth.sho.co.jp/oauth/access_token');
+        return new Uri($this->baseApiUri. 'oauth/access_token');
     }
 
     /**
