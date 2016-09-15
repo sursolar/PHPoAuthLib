@@ -10,9 +10,7 @@ use OAuth\Common\Http\Client\ClientInterface;
 use OAuth\Common\Storage\TokenStorageInterface;
 use OAuth\Common\Http\Uri\UriInterface;
 
-use Config;
-
-class ShogakukanAccount001 extends AbstractService
+class ShogakukanAccount extends AbstractService
 {
     /**
      * Facebook www url - used to build dialog urls
@@ -42,11 +40,7 @@ class ShogakukanAccount001 extends AbstractService
         parent::__construct($credentials, $httpClient, $storage, $scopes, $baseApiUri);
 
         if (null === $baseApiUri) {
-            if (Config::has('oauth.domain')) {
-                $this->baseApiUri = new Uri(config('oauth.domain'));
-            } else {
-                $this->baseApiUri = new Uri('http://dev-oauth.sho.co.jp/');
-            }
+            $this->baseApiUri = new Uri('http://dev-oauth.sho.co.jp/');
         }
     }
 
@@ -55,11 +49,7 @@ class ShogakukanAccount001 extends AbstractService
      */
     public function getAuthorizationEndpoint()
     {
-        if (Config::has('oauth.domain')) {
-            return new Uri(config('oauth.domain'). 'oauth/authorize');
-        } else {
-            return new Uri('http://dev-oauth.sho.co.jp/oauth/authorize');
-        }
+        return new Uri('http://dev-oauth.sho.co.jp/oauth/authorize');
     }
 
     /**
@@ -67,11 +57,7 @@ class ShogakukanAccount001 extends AbstractService
      */
     public function getAccessTokenEndpoint()
     {
-        if (Config::has('oauth.domain')) {
-            return new Uri(config('oauth.domain'). 'oauth/access_token');
-        } else {
-            return new Uri('http://dev-oauth.sho.co.jp/oauth/access_token');
-        }
+        return new Uri('http://dev-oauth.sho.co.jp/oauth/access_token');
     }
 
     /**
