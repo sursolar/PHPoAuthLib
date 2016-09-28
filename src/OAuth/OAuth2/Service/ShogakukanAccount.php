@@ -29,6 +29,8 @@ class ShogakukanAccount extends AbstractService
     const SCOPE_EMAIL                         = 'email';
     // Extended scopes
     const SCOPE_PESONAL_INFORMATION           = 'personal';
+    const SCOPE_REGISTER_USER                 = 'register_user';
+    const SCOPE_UPDATE_USER                   = 'update_user';
 
     public function __construct(
         CredentialsInterface $credentials,
