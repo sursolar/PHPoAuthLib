@@ -59,7 +59,7 @@ class ShogakukanAccount extends AbstractService
      */
     public function getAccessTokenEndpoint()
     {
-        return new Uri($this->baseApiUri. 'oauth/access_token');
+        return new Uri($this->baseApiUri. 'oauth/token');
     }
 
     /**
